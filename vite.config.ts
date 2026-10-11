@@ -5,7 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: '/cymbalMart-Shopping-Agent/', // Add this line
+    base: '/', // Add this line
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
