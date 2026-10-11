@@ -1,0 +1,293 @@
+import { CuratedBundle, PartyBrief, ShoppingItem, TimelineStep } from "../types";
+import grazingImg from "../assets/images/item_artisanal_grazing_board_1791731838345.jpg";
+import aperitifImg from "../assets/images/item_botanical_aperitif_bar_1791731850335.jpg";
+import linenFloralImg from "../assets/images/item_table_linen_floral_1791731862922.jpg";
+
+export const INITIAL_PARTY_BRIEF: PartyBrief = {
+  partyType: "Evening Dinner & Grazing Party",
+  theme: "Warm Autumn Harvest & Artisanal Table",
+  guestCount: 12,
+  budget: 360,
+  dietary: ["Vegetarian-Friendly", "Gluten-Free Options", "Zero-Proof Friendly"],
+  specialRequests:
+    "Ready-to-serve platters for a busy host with under 45 minutes of prep time; include both zero-proof botanical spritzes and wine pairings.",
+};
+
+export const INITIAL_SUMMARY =
+  "CymbalMart Shopping Agent converted your Autumn Harvest Dinner Party brief for 12 guests into 8 ready-to-stage items across 4 departments. Total cart is $332.00 ($27.67/guest), keeping you $28.00 under your $360.00 target budget.";
+
+export const INITIAL_SHOPPING_ITEMS: ShoppingItem[] = [
+  {
+    id: "cm-item-1",
+    sku: "CM-4102",
+    name: "CymbalMart Reserve Aged Comté, Brie & Fig Grazing Platter",
+    category: "Food & Grazing",
+    unitPrice: 36,
+    quantity: 2,
+    unit: "platters",
+    scalingFormula: "1 platter per 6 guests (150g per person)",
+    dietaryNotes: "Vegetarian · Gluten-Free",
+    aisle: "Aisle 2 · CymbalMart Artisanal Deli",
+    priority: "Essential",
+    rationale: "Pre-sliced cave-aged cheeses with black mission figs—zero slicing required for a busy host.",
+    includedInCart: true,
+    agentStatus: "unchanged",
+  },
+  {
+    id: "cm-item-2",
+    sku: "CM-4188",
+    name: "Raw Comb Honey, Marcona Almonds & Seeded Buckwheat Crisps",
+    category: "Food & Grazing",
+    unitPrice: 18,
+    quantity: 2,
+    unit: "packs",
+    scalingFormula: "1 accompaniment kit per 6 guests",
+    dietaryNotes: "Vegetarian · Certified Gluten-Free",
+    aisle: "Aisle 2 · CymbalMart Specialty Bakery",
+    priority: "Essential",
+    rationale: "Ensures gluten-free guests can enjoy the grazing board without cross-contamination.",
+    includedInCart: true,
+    agentStatus: "unchanged",
+  },
+  {
+    id: "cm-item-3",
+    sku: "CM-5210",
+    name: "Wood-Fired Heirloom Mushroom & Ricotta Flatbread Trays",
+    category: "Food & Grazing",
+    unitPrice: 28,
+    quantity: 3,
+    unit: "trays",
+    scalingFormula: "3 warm slices per guest (36 pieces total)",
+    dietaryNotes: "Vegetarian",
+    aisle: "Aisle 5 · CymbalMart Prepared Kitchen",
+    priority: "Essential",
+    rationale: "12-minute oven-ready hot main appetizer that anchors the dinner menu.",
+    includedInCart: true,
+    agentStatus: "unchanged",
+  },
+  {
+    id: "cm-item-4",
+    sku: "CM-8014",
+    name: "Blood Orange & Gentian Root Botanical Spritz Mixer (750ml)",
+    category: "Beverages & Mixers",
+    unitPrice: 19,
+    quantity: 2,
+    unit: "bottles",
+    scalingFormula: "1 bottle yields 8 coupe spritzes",
+    dietaryNotes: "Zero-Proof · Vegan · Gluten-Free",
+    aisle: "Aisle 9 · CymbalMart Beverage Cellar",
+    priority: "Essential",
+    rationale: "Sophisticated non-alcoholic welcome drink garnished with dehydrated blood orange.",
+    includedInCart: true,
+    agentStatus: "unchanged",
+  },
+  {
+    id: "cm-item-5",
+    sku: "CM-8390",
+    name: "CymbalMart Sommelier Selection Pinot Noir & Chenin Blanc Duo",
+    category: "Beverages & Mixers",
+    unitPrice: 34,
+    quantity: 2,
+    unit: "2-packs",
+    scalingFormula: "4 bottles total (20 generous glasses)",
+    dietaryNotes: "Organic · Low-Intervention",
+    aisle: "Aisle 9 · CymbalMart Beverage Cellar",
+    priority: "Recommended",
+    rationale: "Bundled 2-pack saves 15% compared to single-bottle pricing while pairing with both cheese and flatbreads.",
+    includedInCart: true,
+    agentStatus: "unchanged",
+  },
+  {
+    id: "cm-item-6",
+    sku: "CM-9104",
+    name: "Oatmeal Flax Linen-Feel Table Runner & 24 Dinner Napkin Set",
+    category: "Tableware & Decor",
+    unitPrice: 26,
+    quantity: 1,
+    unit: "set",
+    scalingFormula: "Covers 10–14 seat dining table",
+    dietaryNotes: "Compostable / Reusable Weave",
+    aisle: "Aisle 12 · CymbalMart Home & Tabletop",
+    priority: "Recommended",
+    rationale: "Delivers warm travertine-and-linen texture with effortless post-party cleanup.",
+    includedInCart: true,
+    agentStatus: "unchanged",
+  },
+  {
+    id: "cm-item-7",
+    sku: "CM-9420",
+    name: "Olive Branch & White Ranunculus Centerpiece Bouquet",
+    category: "Tableware & Decor",
+    unitPrice: 22,
+    quantity: 1,
+    unit: "bouquet",
+    scalingFormula: "1 low-sightline floral arrangement",
+    dietaryNotes: "Fragrance-Free Dining Foliage",
+    aisle: "Front Entrance · CymbalMart Floral Market",
+    priority: "Optional Upgrade",
+    rationale: "Pre-trimmed stems drop straight into a low vessel in under 2 minutes.",
+    includedInCart: true,
+    agentStatus: "unchanged",
+  },
+  {
+    id: "cm-item-8",
+    sku: "CM-9811",
+    name: "Unscented Pure Beeswax Dinner Tapers & Bamboo Serving Tongs",
+    category: "Host & Party Essentials",
+    unitPrice: 16,
+    quantity: 1,
+    unit: "pack",
+    scalingFormula: "6 smokeless tapers + 4 serving utensils",
+    dietaryNotes: "Unscented for Dining",
+    aisle: "Aisle 12 · CymbalMart Host Essentials",
+    priority: "Essential",
+    rationale: "Combines warm ambient candlelight with dedicated serving tongs to separate gluten-free platters.",
+    includedInCart: true,
+    agentStatus: "unchanged",
+  },
+];
+
+export const INITIAL_TIMELINE: TimelineStep[] = [
+  {
+    timeOffset: "24 Hours Prior",
+    task: "Confirm CymbalMart Express Pickup or Courier window; chill white wine and botanical spritz bottles.",
+    category: "Beverages & Mixers",
+  },
+  {
+    timeOffset: "45 Minutes Prior",
+    task: "Drape flax table runner, place olive branch bouquet, and set grazing platters out to reach room temperature.",
+    category: "Tableware & Decor",
+  },
+  {
+    timeOffset: "15 Minutes Prior",
+    task: "Warm mushroom & ricotta flatbread trays at 400°F for 10 minutes; pour welcome blood orange spritzes.",
+    category: "Food & Grazing",
+  },
+  {
+    timeOffset: "Guest Arrival",
+    task: "Light unscented beeswax tapers and set out dedicated gluten-free serving tongs.",
+    category: "Host & Party Essentials",
+  },
+];
+
+export const CURATED_BUNDLES: CuratedBundle[] = [
+  {
+    id: "bundle-grazing",
+    title: "CymbalMart Artisanal Deli Grazing Bundle",
+    subtitle: "Food & Grazing · Serves 10–14 Guests",
+    category: "Food & Grazing",
+    imageUrl: grazingImg,
+    price: 68,
+    servingScale: "150g per guest · Zero prep required",
+    description:
+      "Pre-staged Comté, prosciutto, figs, raw honeycomb, and gluten-free seeded crackers ready to unbox directly onto your table.",
+    itemsToAdd: [
+      {
+        sku: "CM-4199",
+        name: "CymbalMart Artisanal Deli Complete Grazing Bundle",
+        category: "Food & Grazing",
+        unitPrice: 68,
+        quantity: 1,
+        unit: "bundle",
+        scalingFormula: "Serves 10–14 guests generously",
+        dietaryNotes: "Includes Gluten-Free Crackers",
+        aisle: "Aisle 2 · CymbalMart Artisanal Deli",
+        priority: "Essential",
+        rationale: "All-in-one grazing centerpiece that saves $14 compared to individual items.",
+        agentStatus: "added",
+      },
+    ],
+  },
+  {
+    id: "bundle-spritz",
+    title: "Zero-Proof Blood Orange Aperitif Bar Kit",
+    subtitle: "Beverages & Mixers · 16 Coupe Servings",
+    category: "Beverages & Mixers",
+    imageUrl: aperitifImg,
+    price: 42,
+    servingScale: "2 welcome drinks per guest · Garnishes included",
+    description:
+      "Small-batch botanical blood orange aperitif bottles bundled with club soda, dehydrated citrus wheels, and fresh rosemary.",
+    itemsToAdd: [
+      {
+        sku: "CM-8055",
+        name: "Zero-Proof Blood Orange Aperitif & Citrus Garnish Kit",
+        category: "Beverages & Mixers",
+        unitPrice: 42,
+        quantity: 1,
+        unit: "kit",
+        scalingFormula: "16 complete spritz pours",
+        dietaryNotes: "Zero-Proof · Vegan · Gluten-Free",
+        aisle: "Aisle 9 · CymbalMart Beverage Cellar",
+        priority: "Recommended",
+        rationale: "Turnkey welcome cocktail station for busy hosts.",
+        agentStatus: "added",
+      },
+    ],
+  },
+  {
+    id: "bundle-tabletop",
+    title: "Harvest Flax Linen, Floral & Beeswax Candle Kit",
+    subtitle: "Tableware & Decor · 8 to 14 Seat Table",
+    category: "Tableware & Decor",
+    imageUrl: linenFloralImg,
+    price: 54,
+    servingScale: "Runner · Ceramic vase · 8 beeswax tapers",
+    description:
+      "Everything needed to dress the table in 5 minutes: oatmeal flax runner, olive & white ranunculus stems, and unscented beeswax candles.",
+    itemsToAdd: [
+      {
+        sku: "CM-9190",
+        name: "Harvest Flax Runner, Olive Bouquet & Beeswax Taper Bundle",
+        category: "Tableware & Decor",
+        unitPrice: 54,
+        quantity: 1,
+        unit: "bundle",
+        scalingFormula: "Complete 12-seat table styling kit",
+        dietaryNotes: "Unscented Dining Candles",
+        aisle: "Aisle 12 · CymbalMart Home & Tabletop",
+        priority: "Recommended",
+        rationale: "Instant table elevation without visiting multiple stores.",
+        agentStatus: "added",
+      },
+    ],
+  },
+];
+
+export const QUICK_REFINEMENT_PROMPTS = [
+  "Align list strictly under $260 by swapping to CymbalMart value picks",
+  "Scale quantities up for 18 guests while staying under $400",
+  "Make the entire shopping list 100% Gluten-Free and Nut-Free",
+  "Swap alcoholic wines for zero-proof sparkling tea and add a dessert platter",
+];
+
+export const PARTY_TEMPLATES: { label: string; brief: PartyBrief }[] = [
+  {
+    label: "Autumn Harvest Dinner (12 Guests · $360)",
+    brief: INITIAL_PARTY_BRIEF,
+  },
+  {
+    label: "Game Day & Taco Bar Watch Party (16 Guests · $240)",
+    brief: {
+      partyType: "Casual Watch Party & Buffet",
+      theme: "Street Taco Fiesta & Craft Soda Bar",
+      guestCount: 16,
+      budget: 240,
+      dietary: ["Gluten-Free Corn Tortillas", "Vegetarian Option", "Nut-Free"],
+      specialRequests:
+        "Zero-cook heated trays, guacamole & salsa trio, disposable compostable plates, and ice-cold citrusaguas frescas.",
+    },
+  },
+  {
+    label: "Milestone Birthday Cocktail Soirée (20 Guests · $500)",
+    brief: {
+      partyType: "Evening Cocktail & Bite-Sized Reception",
+      theme: "Sparkling Aperitif & Passed Canapés",
+      guestCount: 20,
+      budget: 500,
+      dietary: ["Vegetarian-Friendly", "Zero-Proof Friendly"],
+      specialRequests:
+        "Finger foods only (no forks needed), celebratory dessert tartlets, coupe glassware, and warm ambient lighting.",
+    },
+  },
+];
